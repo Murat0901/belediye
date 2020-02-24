@@ -1,5 +1,24 @@
-menu {
-    font-size: 12rem;
-    font-weight: 100;
-    color: brown;
+h2 {
+  color: #000F08;
 }
+
+.my-nav {
+  background-color: #000F08 !important;
+  color: #FCFF4B !important;
+}
+
+a {
+  color: #FCFF4B !important;
+}
+
+.btn {
+  background-color: #000F08 !important;
+  color: #FCFF4B !important;
+  border-color: #FCFF4B !important;
+}
+
+.card {
+  border-block: #FCFF4B !important;
+}
+
+/*# sourceMappingURL=main.css.map */

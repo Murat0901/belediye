@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import TemplateView
 from .models import BlogPost
 
-class BlogPageView(ListView):
+class BlogView(TemplateView):
     model = BlogPost
     template_name = "blog.html"
