@@ -1,24 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 h2 {
   color: #000F08;
 }
 
 .my-nav {
-  background-color: #000F08 !important;
-  color: #FCFF4B !important;
+  background-color: #000F08;
+  color: #FCFF4B;
+}
+
+nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.my-link {
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  font-size: 16px;
 }
 
 a {
-  color: #FCFF4B !important;
+  color: #FCFF4B;
 }
 
 .btn {
-  background-color: #000F08 !important;
-  color: #FCFF4B !important;
-  border-color: #FCFF4B !important;
+  background-color: #000F08;
+  color: #FCFF4B;
+  border-color: #FCFF4B;
+}
+.btn:hover {
+  font-weight: bold;
 }
 
 .card {
-  border-block: #FCFF4B !important;
+  border-block: #FCFF4B;
 }
 
 /*# sourceMappingURL=main.css.map */

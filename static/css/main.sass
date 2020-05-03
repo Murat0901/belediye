@@ -1,21 +1,35 @@
 $my-color:#FCFF4B
 $my-bgcolor:#000F08
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box    
     
 h2
     color: #000F08
 
 .my-nav
-    background-color: $my-bgcolor !important
-    color: $my-color !important
-    
+    background-color: $my-bgcolor
+    color: $my-color
+
+nav .navbar-toggler-icon
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+.my-link
+    padding: 1rem 1rem
+    margin: 0 1rem
+    font-size: 16px
 
 a
-    color: $my-color !important
+    color: $my-color
 
 .btn
-    background-color: $my-bgcolor !important
-    color: $my-color !important
-    border-color: $my-color !important    
+    background-color: $my-bgcolor
+    color: $my-color
+    border-color: $my-color
+    &:hover
+        font-weight: bold    
 
 .card
-    border-block: $my-color !important
+    border-block: $my-color
