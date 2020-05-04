@@ -1,32 +1,34 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
-<div class="container">
+<section id="home">
+  <div class="container">
     <div class="row mt-3">
-        <div class="col-sm-12 text-center">
-            <h2>Son Dakika Haberler</h2>
+      <div class="col-sm-12 text-center">
+        <h2>Son Dakika Haberler</h2>
+      </div>
+      {% for LatestPost in object_list %}
+      <div class="col-sm-4">
+        <div class="card" style="width: auto;">
+          <div class="card-body">
+            <img class="card-img-top" src="{{LatestPost.LatestImage.url}}" alt="">
+            <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
+            <p class="card-text">{{LatestPost.LatestContent}}</p>
+            <button type="button" class="btn btn-primary">
+              Devamını Oku...
+            </button>
+          </div>
         </div>
-        {% for LatestPost in object_list %}
-        <div class="col-sm-4">
-            <div class="card" style="width: auto;">
-                <div class="card-body">
-                    <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
-                    <p class="card-text">{{LatestPost.LatestContent}}</p>
-                    <button type="button" class="btn btn-primary">Devamını Oku...</button>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-
+      </div>
+      {% endfor %}
     </div>
 
     <div class="row">
-        <div class="col-sm-12 text-center">
-            <h1>Hello</h1>
-            <p>Just some text here</p>
-        </div>
+      <div class="col-sm-12 text-center">
+        <h1>Hello</h1>
+        <p>Just some text here</p>
+      </div>
     </div>
-
-</div>
-
+  </div>
+</section>
 
 {% endblock content %}

@@ -10,6 +10,7 @@ class Post(models.Model):
 
 class LatestPost(models.Model):
     LatestTitle = models.CharField(max_length=100, verbose_name="Başlık")
+    LatestImage = models.ImageField(upload_to='images/', null=True)
     LatestContent = models.TextField(verbose_name="İçerik")
     date = models.DateTimeField(auto_now_add=True)
 

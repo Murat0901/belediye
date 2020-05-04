@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+#home .container {
+  height: 100vh;
 }
 
 h2 {
@@ -10,7 +19,27 @@ h2 {
 
 .my-nav {
   background-color: #000F08;
-  color: #FCFF4B;
+  color: #007bff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.my-nav a {
+  text-decoration: none;
+}
+.my-nav a:hover {
+  color: #fff;
+  transition: 0.4s;
+}
+.my-nav a:hover::after {
+  width: 100%;
+}
+.my-nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s;
 }
 
 nav .navbar-toggler-icon {
@@ -23,21 +52,21 @@ nav .navbar-toggler-icon {
   font-size: 16px;
 }
 
-a {
-  color: #FCFF4B;
-}
-
 .btn {
   background-color: #000F08;
-  color: #FCFF4B;
-  border-color: #FCFF4B;
+  color: #007bff;
+  border-color: #007bff;
 }
 .btn:hover {
   font-weight: bold;
 }
 
 .card {
-  border-block: #FCFF4B;
+  border-block: #007bff;
+}
+.card .card-img-top {
+  max-width: 250px;
+  max-height: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */
