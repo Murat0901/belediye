@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap')
 
-$my-color:#007bff
+$my-color:#00a3c8
 $my-bgcolor:#000F08
 
 *
@@ -11,19 +11,39 @@ $my-bgcolor:#000F08
 body
     font-family: 'Lora', serif
 
+.head-top
+    display: flex
+    background-color: #00a3c8
+    height: 40px
+    color: white 
+    padding: 0 1rem
+    color: white
+    ul
+        margin: auto 0
+        list-style: none
+        display: flex
+        justify-content: space-between
+        li
+            padding: 0 1em
+
+.top-a 
+    color: white !important
+    text-decoration: none !important
+
 #home 
     .container
-        height: 100vh    
+        height: 100%   
 
 h2
     color: #000F08
-
+    
 .my-nav
     background-color: $my-bgcolor
     color: $my-color
     font-weight: bold
     letter-spacing: 2px
     a
+        color: $my-color
         text-decoration: none
         &:hover
             color: #fff
@@ -58,3 +78,17 @@ nav .navbar-toggler-icon
     .card-img-top
         max-width: 250px
         max-height: 300px    
+
+.my-footer
+    display: flex
+    flex-direction: column
+    background-color: $my-bgcolor
+    color: $my-color
+    bottom: 0
+    left: 0
+    position: relative
+    height: 150px
+    clear: both
+    p
+        justify-content: center
+        align-items: center
