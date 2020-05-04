@@ -37,12 +37,26 @@ body {
   height: 100%;
 }
 #home .homepage {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat center center;
+  height: calc(100vh - 80px);
+  background-image: url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+}
+#home .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: calc(100vh - 80px);
   width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0.2;
 }
 #home h1 {
-  color: #00a3c8;
+  color: #fff;
+  font-size: calc(2.5vw + 1.5rem);
 }
 
 h2 {
@@ -82,7 +96,7 @@ nav .navbar-toggler-icon {
 .my-link {
   padding: 1rem 1rem;
   margin: 0 1rem;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .btn {
@@ -118,9 +132,19 @@ nav .navbar-toggler-icon {
   align-items: center;
 }
 
+/* Mobilde alt cizgi gorunmesin- Dont show underline on mobile */    
 @media (max-width: 640px) {
-  .nav-item {
-    font-size: 10px;
+  .my-nav {
+    font-size: 1em;
+    line-height: 10px;
+  }
+  .my-nav .my-link:hover,
+.my-nav .navbar-brand:hover {
+    width: 0;
+  }
+  .my-nav .my-link:hover::after,
+.my-nav .navbar-brand:hover::after {
+    width: 0;
   }
 }
 

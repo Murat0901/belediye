@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-12 text-center">
+            <h2>Son Dakika Haberler</h2>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: auto;">
+            <img class="card-img-top" src="{{LatestPost.image.url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
+                    <p class="card-text">{{LatestPost.LatestContent}}</p>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+{% endblock content%}

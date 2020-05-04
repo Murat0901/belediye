@@ -1,49 +1,49 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
 <section id="home">
-  <header class="homepage">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12 text-center">
-          <h1>Merhaba</h1>
-          <h2>Ağız ve Diş Sağlığı Merkezi</h2>
-        </div>
-      </div>
-    </div>
-  </header>
+    <header class="homepage">
 
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-        <h2>Ağız ve Diş Sağlığı Merkezi</h2>
-      </div>
-      {% for LatestPost in object_list %}
-      <div class="col-sm-4">
-        <div class="card" style="width: auto;">
-          <div class="card-body">
-            <img
-              class="card-img-top"
-              src="{{LatestPost.LatestImage.url}}"
-              alt=""
-            />
-            <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
-            <p class="card-text">{{LatestPost.LatestContent}}</p>
-            <button type="button" class="btn btn-primary">
+        <div class="container-fluid h-100">
+            <div class="overlay"></div>
+
+            <div class="row h-100 align-items-center">
+
+                <div class="col-12 text-center">
+
+                    <h1>DentAYDIN</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-12 text-center">
+                <h2>Ağız ve Diş Sağlığı Merkezi</h2>
+            </div>
+            {% for LatestPost in object_list %}
+            <div class="col-sm-4">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{LatestPost.LatestImage.url}}" alt="" />
+                        <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
+                        <p class="card-text">{{LatestPost.LatestContent}}</p>
+                        <button type="button" class="btn btn-primary">
               Devamını Oku...
             </button>
-          </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-      </div>
-      {% endfor %}
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h1>Hello</h1>
-        <p>Just some text here</p>
-      </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Hello</h1>
+                <p>Just some text here</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 {% endblock content %}

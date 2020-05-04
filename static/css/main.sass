@@ -27,7 +27,7 @@ body
             padding: 0 1em
 
 .top-a 
-    top:0
+    top: 0
     color: white !important
     text-decoration: none !important
 
@@ -35,11 +35,25 @@ body
     .container
         height: 100%
     .homepage
-        height: 100vh
-        background: url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat center center
+        height: calc(100vh - 80px)
+        background-image: url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        left: 0
+        right: 0
+    .overlay
+        background: rgba(0,0,0,0.7)
+        position: absolute
+        height: calc(100vh - 80px)
         width: 100%
+        left: 0
+        right: 0
+        opacity: 0.2
+
     h1
-        color:$my-color
+        color: #fff
+        font-size: calc(2.5vw + 1.5rem)
 h2
     color: #000F08
     
@@ -70,7 +84,7 @@ nav .navbar-toggler-icon
 .my-link
     padding: 1rem 1rem
     margin: 0 1rem
-    font-size: 16px
+    font-size: 1em
 
 .btn
     background-color: $my-bgcolor
@@ -99,6 +113,14 @@ nav .navbar-toggler-icon
         justify-content: center
         align-items: center
 
+/* Mobilde alt cizgi gorunmesin- Dont show underline on mobile */    
 @media( max-width: 640px )
-    .nav-item
-        font-size: 10px
+    .my-nav
+        font-size: 1em
+        line-height: 10px
+        .my-link,
+        .navbar-brand    
+            &:hover
+                width: 0
+                &::after
+                    width: 0    
