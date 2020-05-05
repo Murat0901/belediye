@@ -42,14 +42,15 @@ body
         background-repeat: no-repeat
         left: 0
         right: 0
-    .overlay
-        background: rgba(0,0,0,0.7)
-        position: absolute
-        height: calc(100vh - 80px)
-        width: 100%
-        left: 0
-        right: 0
-        opacity: 0.2
+
+.overlay
+    background: rgba(0,0,0,0.7)
+    position: absolute
+    height: calc(100vh - 80px)
+    width: 100%
+    left: 0
+    right: 0
+    opacity: 0.2
 
     h1
         color: #fff
@@ -97,7 +98,41 @@ nav .navbar-toggler-icon
     border-block: $my-color
     .card-img-top
         max-width: 250px
-        max-height: 300px    
+        max-height: 300px
+
+#about
+    .overlay
+        background: rgba(150,200,200,0.9)
+        opacity: 0.5
+        height: calc(50vh - 100px)
+    .about-top
+        height: calc(50vh - 100px)
+        width: 100%
+        background-image: url("https://images.unsplash.com/photo-1571102325569-2ce36b41071b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        h1
+            color: #fff
+            font-size: calc(2.5vw + 1rem)
+    .about-mid
+        background-color: #f7f7f7
+
+#contact
+    .overlay
+        background: rgba(150,200,200,0.9)
+        opacity: 0.5
+        height: calc(50vh - 100px)
+    .contact-top
+        height: calc(50vh - 100px)
+        width: 100%
+        background-image: url("https://images.unsplash.com/photo-1571102325569-2ce36b41071b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        h1
+            color: #fff
+            font-size: calc(2.5vw + 1rem)
 
 .my-footer
     display: flex
@@ -117,10 +152,16 @@ nav .navbar-toggler-icon
 @media( max-width: 640px )
     .my-nav
         font-size: 1em
-        line-height: 10px
+        line-height: 1px
         .my-link,
         .navbar-brand    
             &:hover
                 width: 0
                 &::after
                     width: 0    
+    #about,
+    #contact
+        .about-top,
+        .contact-top        
+        h1
+            text-align: center
