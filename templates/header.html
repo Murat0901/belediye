@@ -17,17 +17,21 @@
   <body>
     <div class="container-fluid head-top">
       <div class="container">
-        <div class="container">
-          <div class="row">
-            <ul>
-              <li>
-                <p>Tel: 0 256 222 22 22</p>
-              </li>
-              <li>
-                <a class="top-a" href="/admin">Yönetici Paneli</a>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <ul class="d-flex justify-content-between">
+            <li>
+              <p>Tel: 0 256 222 22 22</p>
+            </li>
+            {% if user.is_superuser %}
+            <li>
+              <a class="top-a" href="/admin">Yönetici Paneli</a>
+            </li>
+            {% else %}
+            <li>
+              <p>Sitemize Hoş geldiniz</p>
+            </li>
+            {% endif %}
+          </ul>
         </div>
       </div>
     </div>

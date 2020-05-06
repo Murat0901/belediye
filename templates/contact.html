@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %} {% load static %} {% load crispy_forms_tags %}
+{% extends 'base.html' %} {% block content %} {% load static %} {% load crispy_forms_tags %} {% load icon %}
 
 <section id="contact">
   <div class="overlay"></div>
@@ -8,6 +8,31 @@
         <div class="col-12">
           <h1>İletişim</h1>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-3">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>Bize Ulaşın</h2>
+      </div>
+    </div>
+
+    <div class="row text-center mt-3 contact-info">
+      <div class="col-md-4">
+        <p>{% icon "phone" class="my-icon"%}</p>
+        <h5>Telefon:</h5>
+        <p>256 222 22 22</p>
+      </div>
+      <div class="col-md-4">
+        <p>{% icon "map-pin" class="my-icon"%}</p>
+        <h5>Adres</h5>
+        <p>Cumhuriyet Mah. Atatürk Cad. No 10</p>
+      </div>
+      <div class="col-md-4">
+        <p>{% icon "mail" class="my-icon"%}</p>
+        <h5>E-Posta</h5>
+        <p>info@mail.com</p>
       </div>
     </div>
   </div>

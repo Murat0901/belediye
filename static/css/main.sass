@@ -2,6 +2,7 @@
 
 $my-color:#00a3c8
 $my-bgcolor:#000F08
+$my-gray:#EBF5DF
 
 *
     padding: 0
@@ -116,7 +117,7 @@ nav .navbar-toggler-icon
             color: #fff
             font-size: calc(2.5vw + 1rem)
     .about-mid
-        background-color: #f7f7f7
+        background-color: $my-gray
 
 #contact
     .overlay
@@ -133,6 +134,15 @@ nav .navbar-toggler-icon
         h1
             color: #fff
             font-size: calc(2.5vw + 1rem)
+    .contact-info
+        .my-icon
+            color: $my-color
+        .col-md-4
+            padding: 1em
+            &:hover
+                border-radius: 0.9em
+                background-color: $my-gray
+                transition: .3s
 
 .my-footer
     display: flex
@@ -162,6 +172,8 @@ nav .navbar-toggler-icon
     #about,
     #contact
         .about-top,
-        .contact-top        
-        h1
-            text-align: center
+        .contact-top,
+        .overlay
+            height: 120px        
+            h1
+                text-align: center

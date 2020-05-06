@@ -135,7 +135,7 @@ nav .navbar-toggler-icon {
   font-size: calc(2.5vw + 1rem);
 }
 #about .about-mid {
-  background-color: #f7f7f7;
+  background-color: #EBF5DF;
 }
 
 #contact .overlay {
@@ -154,6 +154,17 @@ nav .navbar-toggler-icon {
 #contact .contact-top h1 {
   color: #fff;
   font-size: calc(2.5vw + 1rem);
+}
+#contact .contact-info .my-icon {
+  color: #00a3c8;
+}
+#contact .contact-info .col-md-4 {
+  padding: 1em;
+}
+#contact .contact-info .col-md-4:hover {
+  border-radius: 0.9em;
+  background-color: #EBF5DF;
+  transition: 0.3s;
 }
 
 .my-footer {
@@ -187,8 +198,20 @@ nav .navbar-toggler-icon {
     width: 0;
   }
 
-  #about h1,
-#contact h1 {
+  #about .about-top,
+#about .contact-top,
+#about .overlay,
+#contact .about-top,
+#contact .contact-top,
+#contact .overlay {
+    height: 120px;
+  }
+  #about .about-top h1,
+#about .contact-top h1,
+#about .overlay h1,
+#contact .about-top h1,
+#contact .contact-top h1,
+#contact .overlay h1 {
     text-align: center;
   }
 }
