@@ -3,6 +3,7 @@
 $my-color:#00a3c8
 $my-bgcolor:#000F08
 $my-gray:#EBF5DF
+$aqua:rgba(150,200,200,0.4)
 
 *
     padding: 0
@@ -43,6 +44,22 @@ body
         background-repeat: no-repeat
         left: 0
         right: 0
+    .home-mid
+        display: grid
+        grid-template-columns: 33% 33% 33%
+        column-gap: 1em
+        justify-content: center
+        text-align: center
+        .my-border
+            background-color: $aqua
+            border-radius: 0.9em
+            padding: 2em
+            margin: 1em
+            &:hover
+                background-color: #fff
+                border: 2px solid $aqua
+                transition: .3s
+            
 
 .overlay
     background: rgba(0,0,0,0.7)
@@ -58,6 +75,9 @@ body
         font-size: calc(2.5vw + 1.5rem)
 h2
     color: #000F08
+
+
+            
     
 .my-nav
     background-color: $my-bgcolor
@@ -158,7 +178,6 @@ nav .navbar-toggler-icon
         justify-content: center
         align-items: center
 
-/* Mobilde alt cizgi gorunmesin- Dont show underline on mobile */    
 @media( max-width: 640px )
     .my-nav
         font-size: 1em
@@ -177,3 +196,11 @@ nav .navbar-toggler-icon
             height: 120px        
             h1
                 text-align: center
+
+@media screen and ( max-width:920px  )
+    #home
+        .home-mid
+            display: flex
+            flex-direction: column
+            justify-self: center
+            transition: 0.3s ease
