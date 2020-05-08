@@ -1,72 +1,224 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
 <section id="home">
-    <header class="homepage">
+  <header class="homepage">
+    <div class="container-fluid h-100">
+      <div class="overlay"></div>
 
-        <div class="container-fluid h-100">
-            <div class="overlay"></div>
-
-            <div class="row h-100 align-items-center">
-
-                <div class="col-12 text-center">
-
-                    <h1>DentAYDIN</h1>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container mt-3">
-      <div class="home-mid">
-        <div class="my-border">
-            <h5>Çalışma Saatlerimiz</h5>
-            <ul class="list-unstyled">
-              <li>Pazartesi-Cuma: 09.00-18.00</li>
-              <li>Pazartesi-Cuma: 09.00-18.00</li>
-              <li>Pazartesi-Cuma: 09.00-18.00</li>
-            </ul>
-            <h5>Randevu Alın</h5>
-            <p>Sitemiz üzerinden randevu alabilirsiniz</p>
-            <button class="btn">Randevu Al</button>
-        </div>
-        <div class="my-border">
-          <h5>Hakkımızda</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos, expedita tempora eligendi accusantium nemo aut voluptate ab ipsum! Repudiandae neque ea magnam ex voluptatum adipisci sunt temporibus omnis atque.</p>
-        </div>
-        <div>
-          <img class="img-fluid" src="{% static 'img/doctor.png' %}" alt="doctor">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1>DentAYDIN</h1>
         </div>
       </div>
     </div>
+  </header>
 
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-sm-12 text-center">
-                <h2>Ağız ve Diş Sağlığı Merkezi</h2>
+  <div class="container mt-3">
+    <div class="home-mid">
+      <div class="my-border">
+        <h5>Çalışma Saatlerimiz</h5>
+        <ul class="list-unstyled">
+          <li>Pazartesi-Cuma: 09.00-18.00</li>
+          <li>Pazartesi-Cuma: 09.00-18.00</li>
+          <li>Pazartesi-Cuma: 09.00-18.00</li>
+        </ul>
+        <h5>Randevu Alın</h5>
+        <p>Sitemiz üzerinden randevu alabilirsiniz</p>
+        <button class="btn">Randevu Al</button>
+      </div>
+      <div class="my-border">
+        <h5>Hakkımızda</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+          dignissimos, expedita tempora eligendi accusantium nemo aut voluptate
+          ab ipsum! Repudiandae neque ea magnam ex voluptatum adipisci sunt
+          temporibus omnis atque.
+        </p>
+      </div>
+      <div>
+        <img
+          class="img-fluid"
+          src="{% static 'img/doctor.png' %}"
+          alt="doctor"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid services">
+    <div class="container pt-5">
+      <h4>Servislerimiz</h4>
+      <p>Size daha iyi bir gülüş sunmak tek amacımız...</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button
+                    class="btn"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Diş Tedavisi
+                  </button>
+                </h2>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
             </div>
-            {% for LatestPost in object_list %}
-            <div class="col-sm-4">
-                <div class="card" style="width: auto;">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{{LatestPost.LatestImage.url}}" alt="" />
-                        <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
-                        <p class="card-text">{{LatestPost.LatestContent}}</p>
-                        <button type="button" class="btn btn-primary">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button
+                    class="btn collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    İmplant
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                aria-labelledby="headingTwo"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button
+                    class="btn collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Collapsible Group Item #3
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapseThree"
+                class="collapse"
+                aria-labelledby="headingThree"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 pt-3 text-center">
+        <h4>Kliniğimiz Hakkında</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam vel
+            neque autem eos eveniet placeat? Dolorum explicabo laborum aut cum
+            reprehenderit, distinctio veritatis cupiditate assumenda, ullam
+            doloremque reiciendis! Quos, ad! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Doloremque aliquid incidunt similique
+            quae dolorum, expedita dolorem voluptate, ipsum odio ut, commodi
+            nobis suscipit minima pariatur sed! Ducimus nostrum facilis
+            dolorem?Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consectetur, dolorem. Dolore repudiandae veritatis molestias minima
+            voluptate, inventore, dicta modi quae cupiditate consequuntur
+            architecto consectetur accusamus id laboriosam facere repellat Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam
+            vitae harum id incidunt porro, voluptas, quis neque, ipsam iusto
+            necessitatibus pariatur perspiciatis? Odit soluta tempora iusto,
+            ipsa nemo quidem!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+        <h2>Ağız ve Diş Sağlığı Merkezi</h2>
+      </div>
+      {% for LatestPost in object_list %}
+      <div class="col-sm-4">
+        <div class="card" style="width: auto;">
+          <div class="card-body">
+            <img
+              class="card-img-top"
+              src="{{LatestPost.LatestImage.url}}"
+              alt=""
+            />
+            <h5 class="card-title">{{LatestPost.LatestTitle}}</h5>
+            <p class="card-text">{{LatestPost.LatestContent}}</p>
+            <button type="button" class="btn btn-primary">
               Devamını Oku...
             </button>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+          </div>
         </div>
-
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h1>Hello</h1>
-                <p>Just some text here</p>
-            </div>
-        </div>
+      </div>
+      {% endfor %}
     </div>
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>Hello</h1>
+        <p>Just some text here</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% endblock content %}

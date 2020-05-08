@@ -119,12 +119,9 @@ nav .navbar-toggler-icon {
 }
 
 .btn {
-  background-color: #000F08;
-  color: #00a3c8;
+  background-color: #00a3c8;
+  color: #fff;
   border-color: #00a3c8;
-}
-.btn:hover {
-  font-weight: bold;
 }
 
 .card {
@@ -183,6 +180,9 @@ nav .navbar-toggler-icon {
   border-radius: 0.9em;
   background-color: #EBF5DF;
   transition: 0.3s;
+}
+#contact form input .textinput {
+  border-radius: 0.9;
 }
 
 .my-footer {
