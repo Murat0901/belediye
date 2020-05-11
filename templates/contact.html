@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="container pt-3">
-    <div class="row text-center">
+    <div class="row text-center ml-2 mr-2">
       <div class="col-md-12">
         <h2>Bize Ulaşın</h2>
       </div>
@@ -37,34 +37,47 @@
     </div>
   </div>
   <div class="container">
-    <div class="row mt-3">
+    <div class="row">
       <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h1>Bize ulaşmak için:</h1>
-            <p>Bize ulaşmak için yandaki formu kullanabilirsiniz.</p>
+        <div class="mr-3 ml-3">
+          <div class="card">
+            <div class="card-body">
+              <h1>Bize ulaşmak için:</h1>
+              <p>Bize ulaşmak için yandaki formu kullanabilirsiniz.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h1>Adresimiz:</h1>
-            <p>Hükümet Mah. Atatürk Caddesi No:81</p>
+  
+          <div class="card mt-3">
+            <div class="card-body">
+              <h1>Adresimiz:</h1>
+              <p>Hükümet Mah. Atatürk Caddesi No:81</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-sm-6">
-        <form method="POST" novalidate>
+        <form class="mt-2" id="contact-form" method="POST" novalidate>
           {% csrf_token %} {{form|crispy}}
           <div id="success"></div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Gönder</button>
+            <button id="my-btn" type="submit" class="btn btn-primary">Gönder</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const myForm = document.getElementById("my-btn");
+  const msg = document.getElementById("success");
+
+  myForm.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("hello");
+    msg.innerHTML = "Form gönderildi";
+  })
+</script>
 
 {% endblock content%}

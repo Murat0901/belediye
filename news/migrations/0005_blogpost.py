@@ -8,15 +8,3 @@ class Migration(migrations.Migration):
     dependencies = [
         ('news', '0004_auto_20200129_1242'),
     ]
-
-    operations = [
-        migrations.CreateModel(
-            name='BlogPost',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('BlogTitle', models.CharField(max_length=100, verbose_name='Başlık')),
-                ('BlogContent', models.TextField(verbose_name='İçerik')),
-                ('BlogDate', models.DateTimeField(auto_now_add=True)),
-            ],
-        ),
-    ]

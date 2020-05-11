@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_feather',
     'django_heroku',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

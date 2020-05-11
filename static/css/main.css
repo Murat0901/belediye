@@ -36,6 +36,13 @@ body {
 #home .container {
   height: 100%;
 }
+#home h1 {
+  color: #fff;
+}
+#home .card {
+  height: 100%;
+  border-block: #00a3c8;
+}
 #home .homepage {
   height: calc(100vh - 80px);
   background-image: url("https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
@@ -84,7 +91,7 @@ h2 {
 
 .my-nav {
   background-color: #000F08;
-  color: #00a3c8;
+  color: #a8dadc;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -122,14 +129,6 @@ nav .navbar-toggler-icon {
   background-color: #00a3c8;
   color: #fff;
   border-color: #00a3c8;
-}
-
-.card {
-  border-block: #00a3c8;
-}
-.card .card-img-top {
-  max-width: 250px;
-  max-height: 300px;
 }
 
 #about .overlay {
@@ -177,12 +176,34 @@ nav .navbar-toggler-icon {
   padding: 1em;
 }
 #contact .contact-info .col-md-4:hover {
+  color: #fff;
   border-radius: 0.9em;
-  background-color: #EBF5DF;
+  background-color: #00a3c8;
   transition: 0.3s;
 }
-#contact form input .textinput {
-  border-radius: 0.9;
+#contact .contact-info .col-md-4:hover .my-icon {
+  color: #fff;
+}
+#contact .card-body:hover {
+  color: #fff;
+  background: #00a3c8;
+  border: none;
+  border-radius: 0.9px;
+  transition: 0.3s;
+}
+#contact form .controls .my-input,
+#contact form .controls .my-textarea {
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+#contact form .controls .my-input:hover,
+#contact form .controls .my-textarea:hover {
+  border: 1px solid #00a3c8;
+}
+#contact form button {
+  margin-top: 2em;
 }
 
 .my-footer {
