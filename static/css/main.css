@@ -130,7 +130,17 @@ nav .navbar-toggler-icon {
   color: #fff;
   border-color: #00a3c8;
 }
+.btn:hover {
+  color: #00a3c8;
+  background-color: black;
+}
 
+#about {
+  line-height: 2em;
+}
+#about h2 {
+  font-size: 3em;
+}
 #about .overlay {
   background: rgba(150, 200, 200, 0.9);
   opacity: 0.5;
@@ -150,6 +160,21 @@ nav .navbar-toggler-icon {
 }
 #about .about-mid {
   background-color: #EBF5DF;
+}
+#about .about-mid .about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin-bottom: 3em;
+}
+#about .about-mid .about-cards .card {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 2em;
+}
+#about .about-mid .about-cards p {
+  padding-left: 1em;
 }
 
 #contact .overlay {
@@ -214,7 +239,7 @@ nav .navbar-toggler-icon {
   bottom: 0;
   left: 0;
   position: relative;
-  height: 150px;
+  height: 100%;
   clear: both;
 }
 .my-footer p {
@@ -259,6 +284,13 @@ nav .navbar-toggler-icon {
     flex-direction: column;
     justify-self: center;
     transition: 0.3s ease;
+  }
+
+  #about .about-mid .about-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1em;
   }
 }
 

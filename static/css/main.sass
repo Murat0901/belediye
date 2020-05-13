@@ -15,7 +15,7 @@ body
 
 .head-top
     display: flex
-    background-color:$my-color
+    background-color: $my-color
     height: 40px
     color: white 
     padding: 0 1rem
@@ -37,7 +37,7 @@ body
     .container
         height: 100%
     h1
-        color:#fff
+        color: #fff
     .card
         height: 100%
         border-block: $my-color
@@ -118,8 +118,14 @@ nav .navbar-toggler-icon
     background-color: $my-color
     color: #fff
     border-color: $my-color
+    &:hover
+        color: $my-color
+        background-color: black
 
 #about
+    line-height: 2em
+    h2
+        font-size: 3em
     .overlay
         background: rgba(150,200,200,0.9)
         opacity: 0.5
@@ -136,6 +142,18 @@ nav .navbar-toggler-icon
             font-size: calc(2.5vw + 1rem)
     .about-mid
         background-color: $my-gray
+        .about-cards
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap:2em
+            margin-bottom: 3em
+            .card
+                background-color: transparent
+                border: 1px solid rgba(0,0,0,.15)
+                text-align: center
+                padding: 2em
+            p
+                padding-left: 1em
 
 #contact
     .overlay
@@ -166,7 +184,7 @@ nav .navbar-toggler-icon
                     color: #fff
     .card-body
         &:hover
-            color:#fff
+            color: #fff
             background: $my-color
             border: none
             border-radius: 0.9px
@@ -194,7 +212,7 @@ nav .navbar-toggler-icon
     bottom: 0
     left: 0
     position: relative
-    height: 150px
+    height: 100%
     clear: both
     p
         justify-content: center
@@ -226,3 +244,10 @@ nav .navbar-toggler-icon
             flex-direction: column
             justify-self: center
             transition: 0.3s ease
+    #about
+        .about-mid
+            .about-cards
+                display: grid
+                grid-template-columns: 1fr
+                gap:1em
+                margin:1em
