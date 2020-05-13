@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class Post(models.Model):
     title = models.CharField(max_length=100, verbose_name="Başlık")
@@ -13,7 +13,7 @@ class Post(models.Model):
 class LatestPost(models.Model):
     LatestTitle = models.CharField(max_length=100, verbose_name="Başlık")
     LatestImage = models.ImageField(upload_to='images/', null=True)
-    LatestContent = models.TextField(verbose_name="İçerik")
+    LatestContent = RichTextField(verbose_name="İçerik")
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

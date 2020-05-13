@@ -26,3 +26,4 @@ whitenoise==5.0.1
 wrapt==1.11.2
 django_feather==0.2.6
 django-widget-tweaks==1.4.8
+django-ckeditor==5.9.0

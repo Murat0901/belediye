@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_feather',
     'django_heroku',
     'widget_tweaks',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
