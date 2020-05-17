@@ -1,15 +1,16 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
-<div class="container">
-    <div class="row">
-        <h1>Hizmetlerimiz</h1>
-        {% for BlogPost in object_list %}
-        <div class="col-sm-8">
-            <h1>{{ BlogPost.BlogTitle }}</h1>
+<section id="blog">
+  <div class="overlay"></div>
+  <div class="blog-top">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h1>Hizmetlerimiz</h1>
         </div>
-        {% endfor %}
+      </div>
     </div>
-</div>
-
+  </div>
+</section>
 
 {% endblock content%}

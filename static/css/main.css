@@ -61,6 +61,7 @@ body {
 }
 #home .home-mid .my-border {
   background-color: rgba(150, 200, 200, 0.4);
+  border: 2px;
   border-radius: 0.9em;
   padding: 2em;
   margin: 1em;
@@ -177,6 +178,24 @@ nav .navbar-toggler-icon {
   padding-left: 1em;
 }
 
+#blog .overlay {
+  background: rgba(150, 200, 200, 0.9);
+  opacity: 0.5;
+  height: calc(50vh - 100px);
+}
+#blog .blog-top {
+  height: calc(50vh - 100px);
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1571102325569-2ce36b41071b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#blog .blog-top h1 {
+  color: #fff;
+  font-size: calc(2.5vw + 1rem);
+}
+
 #contact .overlay {
   background: rgba(150, 200, 200, 0.9);
   opacity: 0.5;
@@ -263,17 +282,29 @@ nav .navbar-toggler-icon {
 
   #about .about-top,
 #about .contact-top,
+#about .blog-top,
 #about .overlay,
+#blog .about-top,
+#blog .contact-top,
+#blog .blog-top,
+#blog .overlay,
 #contact .about-top,
 #contact .contact-top,
+#contact .blog-top,
 #contact .overlay {
     height: 120px;
   }
   #about .about-top h1,
 #about .contact-top h1,
+#about .blog-top h1,
 #about .overlay h1,
+#blog .about-top h1,
+#blog .contact-top h1,
+#blog .blog-top h1,
+#blog .overlay h1,
 #contact .about-top h1,
 #contact .contact-top h1,
+#contact .blog-top h1,
 #contact .overlay h1 {
     text-align: center;
   }

@@ -58,6 +58,7 @@ body
         text-align: center
         .my-border
             background-color: $aqua
+            border: 2px
             border-radius: 0.9em
             padding: 2em
             margin: 1em
@@ -145,7 +146,7 @@ nav .navbar-toggler-icon
         .about-cards
             display: grid
             grid-template-columns: 1fr 1fr
-            gap:2em
+            gap: 2em
             margin-bottom: 3em
             .card
                 background-color: transparent
@@ -154,6 +155,23 @@ nav .navbar-toggler-icon
                 padding: 2em
             p
                 padding-left: 1em
+
+#blog
+    .overlay
+        background: rgba(150,200,200,0.9)
+        opacity: 0.5
+        height: calc(50vh - 100px)
+    .blog-top
+        height: calc(50vh - 100px)
+        width: 100%
+        background-image: url("https://images.unsplash.com/photo-1571102325569-2ce36b41071b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        h1
+            color: #fff
+            font-size: calc(2.5vw + 1rem)
+
 
 #contact
     .overlay
@@ -229,9 +247,11 @@ nav .navbar-toggler-icon
                 &::after
                     width: 0    
     #about,
+    #blog,
     #contact
         .about-top,
         .contact-top,
+        .blog-top,
         .overlay
             height: 120px        
             h1
@@ -249,5 +269,5 @@ nav .navbar-toggler-icon
             .about-cards
                 display: grid
                 grid-template-columns: 1fr
-                gap:1em
-                margin:1em
+                gap: 1em
+                margin: 1em
