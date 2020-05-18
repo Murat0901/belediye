@@ -15,7 +15,7 @@
     <div class="container">
        {% for BlogPost in object_list  %}
         <h3> {{BlogPost.BlogTitle}} </h3>
-        <p>{{BlogPost.BlogContent}}</p>
+        <p>{{BlogPost.BlogContent|safe}}</p>
        {% endfor %}
 
     </div>
