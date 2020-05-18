@@ -1,16 +1,25 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
 <section id="blog">
-  <div class="overlay"></div>
-  <div class="blog-top">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12">
-          <h1>Hizmetlerimiz</h1>
+    <div class="overlay"></div>
+    <div class="blog-top">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <h1>Hizmetlerimiz</h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <div class="container">
+       {% for BlogPost in object_list  %}
+        <h3> {{BlogPost.BlogTitle}} </h3>
+        <p>{{BlogPost.BlogContent}}</p>
+       {% endfor %}
+
+    </div>
+
 </section>
 
 {% endblock content%}

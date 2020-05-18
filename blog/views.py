@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
 from .models import BlogPost
+from django.views.generic import ListView
+
+class BlogView(ListView):
+    template_name = 'blog.html'
+    queryset = BlogPost.objects.all()
 
 
-class BlogView(TemplateView):
-    model = BlogPost
-    template_name = "blog.html"

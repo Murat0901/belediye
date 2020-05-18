@@ -177,6 +177,14 @@ nav .navbar-toggler-icon {
 #about .about-mid .about-cards p {
   padding-left: 1em;
 }
+#about .docs {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  gap: 2em;
+}
+#about .docs img {
+  border-radius: 100%;
+}
 
 #blog .overlay {
   background: rgba(150, 200, 200, 0.9);
@@ -322,6 +330,15 @@ nav .navbar-toggler-icon {
     grid-template-columns: 1fr;
     gap: 1em;
     margin: 1em;
+  }
+  #about .docs {
+    display: flex;
+    flex-direction: column;
+  }
+  #about .docs img {
+    height: 25em;
+    width: 30em;
+    margin: 5px;
   }
 }
 
