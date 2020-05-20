@@ -7,5 +7,8 @@ class BlogPost(models.Model):
     BlogContent = RichTextField(verbose_name="İçerik")
     BlogDate = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering =  ['-BlogDate',]
+
     def __str__(self):
         return self.BlogTitle

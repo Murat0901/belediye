@@ -12,10 +12,13 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container pt-5 my-blog">
        {% for BlogPost in object_list  %}
-        <h3> {{BlogPost.BlogTitle}} </h3>
+        <article>
+        <h1> {{BlogPost.BlogTitle}} </h1>
+        <h5> {{BlogPost.BlogDate}} </h5>
         <p>{{BlogPost.BlogContent|safe}}</p>
+        </article>
        {% endfor %}
 
     </div>

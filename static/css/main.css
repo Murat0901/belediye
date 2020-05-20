@@ -203,6 +203,17 @@ nav .navbar-toggler-icon {
   color: #fff;
   font-size: calc(2.5vw + 1rem);
 }
+#blog .my-blog article {
+  width: 100%;
+  text-align: center;
+  padding: 2em;
+}
+#blog .my-blog article p {
+  padding-top: 5px;
+}
+#blog .my-blog article h5 {
+  font-size: 14px;
+}
 
 #contact .overlay {
   background: rgba(150, 200, 200, 0.9);
@@ -275,6 +286,12 @@ nav .navbar-toggler-icon {
 }
 
 @media (max-width: 640px) {
+  .head-top {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .my-nav {
     font-size: 1em;
     line-height: 1px;
