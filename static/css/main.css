@@ -131,6 +131,9 @@ nav .navbar-toggler-icon {
   color: #fff;
   border-color: #00a3c8;
 }
+.btn a {
+  color: #fff;
+}
 .btn:hover {
   color: #00a3c8;
   background-color: black;
