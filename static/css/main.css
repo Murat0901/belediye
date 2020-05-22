@@ -10,7 +10,6 @@ body {
 }
 
 .head-top {
-  display: flex;
   background-color: #00a3c8;
   height: 40px;
   color: white;
@@ -18,10 +17,11 @@ body {
   color: white;
 }
 .head-top ul {
-  margin: auto 0;
-  list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
+  text-align: center;
+  list-style: none;
 }
 .head-top ul li {
   padding: 0 1em;
@@ -290,9 +290,13 @@ nav .navbar-toggler-icon {
 
 @media (max-width: 640px) {
   .head-top {
-    height: 50px;
+    font-size: 14px;
+    height: 25px;
+  }
+  .head-top ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: auto;
   }
 
   .my-nav {
