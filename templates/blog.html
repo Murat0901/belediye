@@ -1,28 +1,40 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
 <section id="blog">
-    <div class="overlay"></div>
-    <div class="blog-top">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <h1>Hizmetlerimiz</h1>
-                </div>
-            </div>
+  <div class="overlay"></div>
+  <div class="blog-top">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h1>Hizmetlerimiz</h1>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class="container pt-5 my-blog">
-       {% for BlogPost in object_list  %}
-        <article>
-        <h1> {{BlogPost.BlogTitle}} </h1>
-        <h5> {{BlogPost.BlogDate}} </h5>
-        <p>{{BlogPost.BlogContent|safe}}</p>
-        </article>
-       {% endfor %}
-
+  <div class="container-fluid p-5 my-blog">
+    <div class="row">
+      {% for BlogPost in object_list %}
+      <div class="col-sm-4 col-xs-6 mt-3">
+        <div class="card">
+          <div class="card-body d-flex flex-column">
+          {% if BlogPost.BlogImage %}
+            <img class="card-img-top img-fluid" src="{{BlogPost.BlogImage.url}}" />
+          {% else %}
+            <img class="img-fluid" src="{% static 'images/img1.jpg' %}" >
+          {% endif %}
+            <h1>{{BlogPost.BlogTitle}}</h1>
+            <h5>{{BlogPost.BlogDate}}</h5>
+            <p>{{BlogPost.BlogContent |truncatewords:15}}</p>
+            <button type="button" class="btn btn-primary mt-auto">
+              <a  href="{% url 'detail' BlogPost.pk %}"> Devamı</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-
+  </div>
 </section>
 
 {% endblock content%}
